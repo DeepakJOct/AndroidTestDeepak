@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_margin="@dimen/_5sdp"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_notif"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:background="@drawable/card1"
+                android:elevation="@dimen/_8sdp"
+                android:layout_height="@dimen/_55sdp"
+                android:layout_margin="@dimen/_10sdp"
+                android:layout_width="@dimen/_55sdp">
+
+                <ImageView
+                    android:layout_centerInParent="true"
+                    android:layout_height="30dp"
+                    android:layout_width="30dp"
+                    android:src="@drawable/ic_notif" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:gravity="center_horizontal"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_width="match_parent"
+                android:text="Push Notifications"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_images"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:background="@drawable/card2"
+                android:elevation="@dimen/_8sdp"
+                android:layout_height="@dimen/_55sdp"
+                android:layout_margin="@dimen/_10sdp"
+                android:layout_width="@dimen/_55sdp">
+
+                <ImageView
+                    android:layout_centerInParent="true"
+                    android:layout_height="30dp"
+                    android:layout_width="30dp"
+                    android:src="@drawable/ic_image" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:gravity="center_horizontal"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_width="match_parent"
+                android:text="Image List"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_json"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:background="@drawable/card3"
+                android:elevation="@dimen/_8sdp"
+                android:layout_height="@dimen/_55sdp"
+                android:layout_margin="@dimen/_10sdp"
+                android:layout_width="@dimen/_55sdp">
+
+                <ImageView
+                    android:layout_centerInParent="true"
+                    android:layout_height="30dp"
+                    android:layout_width="30dp"
+                    android:src="@drawable/ic_list" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:gravity="center_horizontal"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_width="match_parent"
+                android:text="Json, SQLite"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:background="@drawable/card1"
+                android:elevation="@dimen/_8sdp"
+                android:layout_height="@dimen/_55sdp"
+                android:layout_margin="@dimen/_10sdp"
+                android:layout_width="@dimen/_55sdp">
+
+                <ImageView
+                    android:layout_centerInParent="true"
+                    android:layout_height="30dp"
+                    android:layout_width="30dp"
+                    android:src="@null" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:gravity="center_horizontal"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_width="match_parent"
+                android:text="None"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>
