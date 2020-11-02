@@ -54,6 +54,7 @@ import java.security.NoSuchAlgorithmException;
 import app.com.testapp.Background.ConnectivityChangeReceiver;
 import app.com.testapp.Model.utils.CommonUtils;
 import app.com.testapp.Model.utils.Constants;
+import app.com.testapp.Model.utils.Prefs;
 import app.com.testapp.R;
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -98,6 +99,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Prefs.initPrefs(LoginActivity.this);
         setContentView(R.layout.activity_login);
         newLoginActivityInstance = this;
         connectivityChangeReceiver = new ConnectivityChangeReceiver();
@@ -126,11 +128,18 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     @Override
     protected void onResume() {
         super.onResume();
-        if (isLoggedInWithFacebook() && !isFromOnActivityResult) {
-            startActivity(new Intent(LoginActivity.this, MainActivity.class));
+
+        if(!Prefs.getBoolean(Constants.IS_FIRST_TIME, true)) {
+            if (isLoggedInWithFacebook() && !isFromOnActivityResult) {
+                startActivity(new Intent(LoginActivity.this, MainActivity.class));
+            } else {
+                getOptionalPendingResult();
+            }
+
         } else {
-            getOptionalPendingResult();
+            Prefs.putBoolean(Constants.IS_FIRST_TIME, false);
         }
+
 
     }
 

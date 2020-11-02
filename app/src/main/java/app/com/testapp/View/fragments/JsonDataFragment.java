@@ -119,6 +119,7 @@ public class JsonDataFragment extends Fragment {
                     commentsAdapter = new CommentsAdapter(getContext(), memberInfoList);
                     rcv.setLayoutManager(new LinearLayoutManager(getContext()));
                     rcv.setAdapter(commentsAdapter);
+                    edSearch.setVisibility(View.VISIBLE);
                 }
             }
 

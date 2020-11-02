@@ -3,7 +3,13 @@ apply plugin: 'com.android.application'
 android {
     signingConfigs {
         release {
-            storeFile file('/home/developer/Desktop/Deepak JAD/MyApps/TestApp/testapp-keystore.jks')
+            storeFile file('/home/developer/Desktop/Deepak_JAD/MyApps/TestApp/testapp-keystore.jks')
+            storePassword 'deepak201041'
+            keyAlias = 'key0'
+            keyPassword 'deepak201041'
+        }
+        debug {
+            storeFile file('/home/developer/Desktop/Deepak_JAD/MyApps/TestApp/testapp-keystore.jks')
             storePassword 'deepak201041'
             keyAlias = 'key0'
             keyPassword 'deepak201041'
@@ -17,12 +23,16 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        signingConfig signingConfigs.debug
     }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.release
+        }
+        debug {
+            signingConfig signingConfigs.debug
         }
     }
 
